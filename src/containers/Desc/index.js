@@ -23,10 +23,15 @@ export default class Desc extends Component {
 
     render() {
         console.log(this.props.item)
-        const { description } = this.props.item;
+        const { description , title } = this.props.item;
         return (
             <View style={styles.container}>
                 <Header search back onPress={()=> Actions.Market() } style={styles.headerContainer} />
+                <CardSection>
+                    <Text style={styles.titleStyle}>
+                        {title}
+                    </Text>
+                </CardSection>
                 <CardSection>
                     <Text style={styles.descStyle}>
                         {description}

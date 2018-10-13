@@ -6,7 +6,4 @@ export const IMAGES = {
     show3 : require('../images/Gallery/show3.png'),
     show4 : require('../images/Gallery/show4.png'),
 
-
-
-
 }

@@ -4,6 +4,6 @@ import SelectionReducer from './SelectionReducer';
 
 
 export default combineReducers({
-  libraries: DataReducer,
+  lists: DataReducer,
   selectedListId: SelectionReducer,
 });

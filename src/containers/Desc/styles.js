@@ -13,8 +13,14 @@ export default styles = StyleSheet.create({
         justifyContent : 'center',
         alignItems: 'center'
     },
-    descStyle:{
+    titleStyle:{
         fontSize : 20,
+        fontWeight: 'bold',
+        padding: 5,
+        color: COLORS.blue
+    },
+    descStyle:{
+        fontSize : 16,
         fontWeight: 'bold',
         padding: 5
         
