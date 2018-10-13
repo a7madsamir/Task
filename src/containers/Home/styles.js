@@ -7,8 +7,7 @@ export default styles = StyleSheet.create({
             ios: 20,
         }),
         backgroundColor: '#fff',
-        flex: 1
-
+        flex: 1,
     },
     listContainer: {
         flex: 1

@@ -23,7 +23,9 @@ class Home extends Component {
 
         return <ListItem item={item} />
     }
-
+    onDecline(){
+        this.setState({ isVisible: false })
+    }
     render() {
         
         const { isVisible } = this.state;
@@ -40,17 +42,19 @@ class Home extends Component {
                         <Image source={IMAGES.show4} style={{ height: 60, width: 150, margin: 10, borderRadius: 10 }} />
                     </ScrollView>
                 </View>
+
                 <FlatList
                     keyExtractor={extractKey}
                     data={this.props.libraries}
                     renderItem={this.renderItem}
                 />
-                <View style={{ alignItems: 'center', bottom: 20, position: 'relative' , }}>
+
+                <View style={{ bottom: 10, left: '50%', right: '50%', position: 'absolute' ,justifyContent: 'center' , alignItems: 'center', }}>
                     <Button style={{ backgroundColor: COLORS.blue, borderRadius: 30, width: SCREEN.WIDTH * 0.6, height: SCREEN.WIDTH * 0.1, }}
                         onPress={() => (this.setState({ isVisible: true }), console.log("isVisible"+isVisible))}>  +  Sell your Product </Button>
                 </View>
 
-                {isVisible && <AppModal visible={true} /> }
+                {isVisible && <AppModal onDecline={this.onDecline.bind(this)} visible={true} /> }
                 
             </View>
 

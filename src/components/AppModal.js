@@ -20,22 +20,21 @@ class AppModal extends Component {
     }
   }
   render() {
-    const { children, visible, style, outStyle, animationType } = this.props;
+    const {  style, outStyle ,onDecline } = this.props;
     const { isVisible } = this.state;
 
     return (
       <Modal
         visible={isVisible}
         transparent
-        animationType={animationType}
         onRequestClose={() => { }}
       >
         <View style={[styles.containerStyle, outStyle]}>
           <View style={[styles.modalStyle, style]}>
-            <Text>Soon</Text>
-            <Button
+          <AppText style={styles.text}>Soon</AppText>
+            <Button style={{width: SCREEN.WIDTH * .5 , height: 40}}
               buttonColor={COLORS.blue}
-              onPress={() => (this.setState({ isVisible: false }))} > Okay
+              onPress={onDecline} > Yes
                </Button>
           </View>
         </View>
@@ -69,5 +68,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
+  },
+  text: {
+    fontSize: 24,
+    textAlign: 'center',
+    margin: 10,
+    color: COLORS.blue
   },
 });
