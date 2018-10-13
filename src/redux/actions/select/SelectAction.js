@@ -3,10 +3,10 @@ import {
     SELECT_LIST
   } from '../types';
   
-  export const selectLibrary = (libraryId) => {
+  export const selectList = (listId) => {
     return {
       type: SELECT_LIST,
-      payload: libraryId
+      payload: listId
     };
   };
   

@@ -46,7 +46,6 @@ class Input extends Component {
                     color='#000'
                     size={14}
                 />
-                { /*  <Icon name={icon} size={size || 35} style={styles.icon} />*/}
             </View>
         );
     }

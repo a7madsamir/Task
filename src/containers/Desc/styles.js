@@ -6,7 +6,7 @@ export default styles = StyleSheet.create({
         marginTop: Platform.select({
             ios: 20,
         }),
-        backgroundColor: '#fff'
+        backgroundColor: COLORS.white
     },
     headerContainer:{
         height: 70,
@@ -14,14 +14,12 @@ export default styles = StyleSheet.create({
         alignItems: 'center'
     },
     titleStyle:{
-        fontSize : 20,
-        fontWeight: 'bold',
+        ...FONTS.xLarge,
         padding: 5,
         color: COLORS.blue
     },
     descStyle:{
-        fontSize : 16,
-        fontWeight: 'bold',
+        ...FONTS.xMedium,
         padding: 5
         
        }

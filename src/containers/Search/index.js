@@ -1,11 +1,9 @@
 
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, TextInput } from 'react-native';
-import { Header, AppText, TEXTS } from '../../components';
-import Icon from 'react-native-vector-icons/FontAwesome'
-
-import { Scene, Router, Drawer, Tabs, Actions } from 'react-native-router-flux';
+import {  View } from 'react-native';
+import { Header } from '../../components';
+import { Actions } from 'react-native-router-flux';
 import styles from './styles';
 
 export default class Search extends Component {

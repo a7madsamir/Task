@@ -1,7 +1,18 @@
 export const TEXTS = {
 
-    //Header
+    //App text
+
     title : "Deals",
-    searchPlaceholder: "Search"
+    searchPlaceholder: "Search",
+    btnText: " +  Sell your Product",
+
+    //Icon text
+    
+    feeds: "Feeds",
+    profiles: "Profiles",
+    more : "more",
+    market: "Market",
+    bids: "Bids"
+
 
 }

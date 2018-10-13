@@ -4,16 +4,15 @@ import {
     Text,
     TouchableWithoutFeedback,
     View,
-    NativeModules,
-    LayoutAnimation,
     StyleSheet
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { Scene, Router, Drawer, Tabs, Actions } from 'react-native-router-flux';
+import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
 import { CardSection } from '../../common/CardSection';
-import { IMAGES, COLORS, TEXTS, FONTS } from '../../common';
+import {  COLORS } from '../../common';
 import * as actions from '../../redux/actions';
+import styles from './styles';
 
 
 class ListItem extends Component {
@@ -25,23 +24,17 @@ class ListItem extends Component {
     }
 
     renderDescription() {
-        return (Actions.desc({ item: this.props.item }), console.log("yes"));
+        return (Actions.desc({ item: this.props.item }))
     }
 
     render() {
         const { titleStyle, subTitleStyle } = styles;
         const { id, title, subTitle } = this.props.item;
         return (
-            <TouchableWithoutFeedback
-                onPress={() => { (this.props.selectLibrary(id) , this.renderDescription() , console.log("yes"))}}>
+            <TouchableWithoutFeedback onPress={() => { (this.props.selectList(id) , this.renderDescription() )}}>
                 <View style={{ padding: 5 }}>
                     <CardSection>
-                        <View style={{
-                            flex: 1,
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            alignItems: 'center'
-                        }}>
+                        <View style={styles.titleContainer}>
                             <View>
                                 <Text style={titleStyle}>
                                     {title}
@@ -52,7 +45,7 @@ class ListItem extends Component {
                             </View>
 
                             <View>
-                                <Icon size={25} color={'#000'} name={'angle-right'} />
+                                <Icon size={25} color={COLORS.white} name={'angle-right'} />
                             </View>
                         </View>
                     </CardSection>
@@ -66,17 +59,6 @@ class ListItem extends Component {
 }
 
 
-const styles = StyleSheet.create({
-    titleStyle: {
-        fontSize: 16,
-        padding: 2.5,
-    },
-    subTitleStyle: {
-        fontSize: 12,
-        padding: 2.5,
-        color: 'gray'
-    }
-});
 
 const mapStateToProps = (state, ownProps) => {
 

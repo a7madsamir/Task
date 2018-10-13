@@ -4,5 +4,5 @@ export const COLORS = {
     white : '#fff',
     black: '#000',
     icon : '#484848', 
-   
+    headerIcon: '#a0a1a5'
    }

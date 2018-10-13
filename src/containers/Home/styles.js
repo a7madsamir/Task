@@ -1,5 +1,5 @@
 import { StyleSheet, Platform } from 'react-native';
-import { COLORS, FONTS } from '../../common';
+import { SCREEN, COLORS, FONTS } from '../../common';
 
 export default styles = StyleSheet.create({
     container: {
@@ -9,40 +9,49 @@ export default styles = StyleSheet.create({
         backgroundColor: '#fff',
         flex: 1,
     },
-    listContainer: {
+    imageContainer: {
+        marginBottom: 25,
         flex: 1
     },
-    buttonsGroup: {
-        marginTop: 20,
-        alignItems: 'center'
+    imageStyle: {
+        height: 60,
+        width: 150,
+        margin: 10,
+        borderRadius: 10
     },
-    button: {
-        borderRadius: 0,
-        alignSelf: 'stretch',
-        width: 250,
-        height: 40,
+    textStyle: {
+        marginTop: 15,
         marginLeft: 20,
-        marginRight: 20,
-        color: COLORS.text,
-        padding: 5,
-        backgroundColor: COLORS.pink,
+        ...FONTS.medium,
+        color: COLORS.blue
     },
-    buttonText: {
-        color: COLORS.white,
-        ...FONTS.xMedium,
-    },
-    pointsContainer: {
+    btnContainer: {
+        bottom: 10,
+        left: '50%',
+        right: '50%',
+        position: 'absolute',
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1
     },
-    pointsText: {
-        ...FONTS.extraLarge,
-        color: COLORS.yellow
+    btnStyle: {
+        backgroundColor: COLORS.blue,
+        borderRadius: 30,
+        width: SCREEN.WIDTH * 0.6,
+        height: SCREEN.WIDTH * 0.1,
     },
-    title: {
-        margin: 15,
-        ...FONTS.extraLarge,
-        color: COLORS.yellow
+    titleStyle: {
+        fontSize: 16,
+        padding: 2.5,
+    },
+    subTitleStyle: {
+        fontSize: 12,
+        padding: 2.5,
+        color: 'gray'
+    },
+    titleContainer:{
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
     }
 });

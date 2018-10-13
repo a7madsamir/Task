@@ -6,11 +6,10 @@ export default styles = StyleSheet.create({
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: '#F5FCFF',
+          backgroundColor: COLORS.white,
         },
         text: {
-          fontSize: 24,
-          textAlign: 'center',
+          ...FONTS.large,
           margin: 10,
           color: COLORS.blue
         },

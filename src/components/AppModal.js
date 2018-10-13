@@ -34,7 +34,7 @@ class AppModal extends Component {
           <AppText style={styles.text}>Soon</AppText>
             <Button style={{width: SCREEN.WIDTH * .5 , height: 40}}
               buttonColor={COLORS.blue}
-              onPress={onDecline} > Yes
+              onPress={onDecline} > Okay
                </Button>
           </View>
         </View>

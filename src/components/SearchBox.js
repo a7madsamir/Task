@@ -6,15 +6,8 @@ import PropTypes from 'prop-types';
 import { AppText } from '.';
 import { Actions } from 'react-native-router-flux';
 
-
-
-
 class SearchBox extends Component {
     render() {
-        const {
-            value,
-            onChangeText,
-        } = this.props;
         return (
             <TouchableOpacity style={styles.container} activeOpacity={0.5} onPress={()=>Actions.search()} >
                 <Icon name={"search"} size={15} style={styles.icon}></Icon>
@@ -48,15 +41,12 @@ const styles = StyleSheet.create({
 
     },
     icon: {
-        color: '#a0a1a5',
+        color: COLORS.headerIcon,
         marginRight: 15
     },
     textInput: {
-      //  flex: 1,
         ...FONTS.small,
-        color: '#a0a1a5',
-        //paddingHorizontal: 5,
-       // marginHorizontal: 10,
+        color: COLORS.headerIcon,
         textAlign: 'center',
         paddingTop:5
 

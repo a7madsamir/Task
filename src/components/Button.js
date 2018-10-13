@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet ,Text, TouchableOpacity } from 'react-native';
+import {StyleSheet , TouchableOpacity } from 'react-native';
 import {AppText} from './AppText';
 import { COLORS, SCREEN } from '../common';
 
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     elevation:1,
     shadowColor:'#000',
     shadowOffset: {width:0, height:1},
-    shadowOpacity:0.2,
+    shadowOpacity:0.5,
     shadowRadius:1,
     backgroundColor: COLORS.blue,
 

@@ -1,5 +1,5 @@
 import {Platform, StyleSheet, Dimensions} from 'react-native';
-
+ //Using Font
 const FONT_FAMILY = 'Myriad Pro'
 export const FONTS = {
     tiny :{
@@ -37,71 +37,6 @@ export const SCREEN = {
     HEIGHT: Dimensions.get('window').height
 }
 
-export const STYLES = {
 
-    logo:{
-        flex:1,
-    },
-    logoContainer:{
-        marginTop : 40,
-        width:200,
-        height:200,
-        alignItems:'center',
-        justifyContent:'center'
-    },
-
-    listStyle:{
-        listContainer:{
-            flex:1,
-            alignItems:'center',
-            marginVertical:10,
-        },
-        listStyle:{
-            flex:1,
-            marginBottom:10
-        }
-    },
-    spinner:{
-        flex:1,
-        alignItems:'center',
-        justifyContent:'center'
-    },
-
-    toast:{
-        info : {
-            container: {
-            backgroundColor: '#2487DB',
-            alignItems:'center',
-            justifyContent:'center',
-            paddingTop: 25,
-            paddingRight: 15,
-            paddingBottom: 15,
-            paddingLeft: 15
-            }
-  },
-        error : {
-            container: {
-            backgroundColor: 'red',
-            alignItems:'center',
-            justifyContent:'center',
-            paddingTop: 25,
-            paddingRight: 15,
-            paddingBottom: 15,
-            paddingLeft: 15
-            }
-  },
-  success : {
-    container: {
-    backgroundColor: 'green',
-    alignItems:'center',
-    justifyContent:'center',
-    paddingTop: 25,
-    paddingRight: 15,
-    paddingBottom: 15,
-    paddingLeft: 15
-    }
-}
-    }
-}
 
 

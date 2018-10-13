@@ -1,41 +1,27 @@
 
 import React, { Component } from 'react';
-import {
-    Text,
-    TouchableWithoutFeedback,
-    View,
-    NativeModules,
-    LayoutAnimation,
-    StyleSheet,
-    FlatList
-} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { Scene, Router, Drawer, Tabs, Actions } from 'react-native-router-flux';
-import { connect } from 'react-redux';
+import { Text, View, } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 import { CardSection } from '../../common/CardSection';
-import { IMAGES, COLORS, TEXTS, FONTS } from '../../common';
 import { Header, AppText } from '../../components';
-import ListItem from '../Home/ListItem';
-import * as actions from '../../redux/actions';
 import styles from './styles';
 
 export default class Desc extends Component {
 
     render() {
-        console.log(this.props.item)
         const { description , title } = this.props.item;
         return (
             <View style={styles.container}>
                 <Header search back onPress={()=> Actions.Market() } style={styles.headerContainer} />
                 <CardSection>
-                    <Text style={styles.titleStyle}>
+                    <AppText style={styles.titleStyle}>
                         {title}
-                    </Text>
+                    </AppText>
                 </CardSection>
                 <CardSection>
-                    <Text style={styles.descStyle}>
+                    <AppText style={styles.descStyle}>
                         {description}
-                    </Text>
+                    </AppText>
                 </CardSection>
             </View>
 
