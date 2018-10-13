@@ -45,7 +45,7 @@ class ListItem extends Component {
                             </View>
 
                             <View>
-                                <Icon size={25} color={COLORS.white} name={'angle-right'} />
+                                <Icon size={25} color={COLORS.black} name={'angle-right'} />
                             </View>
                         </View>
                     </CardSection>
